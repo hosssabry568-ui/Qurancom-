@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصحف القرآن الكريم المطور</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="intro-screen">
+        <div class="intro-content">
+            <h1>📖</h1>
+            <h2>جاري تحميل القرآن الكريم...</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div class="container" style="display: none;"> <h1>📖 مصحف القرآن الكريم</h1>
+        
+        <input type="text" id="searchInput" placeholder="ابحث عن سورة..." onkeyup="searchSurah()">
+        
+        <select id="surahSelect"></select>
+
+        <div class="font-controls">
+            <button onclick="changeFontSize(2)">A+</button>
+            <button onclick="changeFontSize(-2)">A-</button>
+            <span>حجم الخط</span>
+        </div>
+
+        <div class="controls">
+            <button class="nav-btn" onclick="prevSurah()">السابقة</button>
+            <button class="scroll-btn" id="scrollBtn" onclick="toggleAutoScroll()">قراءة تلقائية</button>
+            <button class="nav-btn" onclick="nextSurah()">التالية</button>
+        </div>
+
+        <div id="ayah-box" class="ayah-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
